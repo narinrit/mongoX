@@ -11,17 +11,17 @@ $db->useDB('test');
 
 FindOne
 ```
-$user = self::$db->findOne('user', ['username' => 'test']);
+$user = $db->findOne('user', ['username' => 'test']);
 ```
 
 Find
 ```
-$post = self::$db->find('post', ['_id' => $id]);
+$post = $db->find('post', ['_id' => $id]);
 ```
 
 Count
 ```
-$count = self::$db->count('post', ['type' => 'text']);
+$count = $db->count('post', ['type' => 'text']);
 ```
 
 Update
