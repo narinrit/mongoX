@@ -16,7 +16,7 @@ $user = $db->findOne('user', ['username' => 'test']);
 
 Find
 ```
-$post = $db->find('post', ['_id' => $id]);
+$post = $db->find('post', ['type' => 'text']);
 ```
 
 Count
