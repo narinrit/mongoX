@@ -11,32 +11,25 @@ $db->useDB('test');
 
 FindOne
 ```
-$user = self::$db->findOne('user', [
-					'username' => $username
-				]);
+$user = self::$db->findOne('user', ['username' => 'test']);
 ```
 
 Find
 ```
-$post = self::$db->find('post', [
-					'_id' => $id
-				]);
+$post = self::$db->find('post', ['_id' => $id]);
+```
+
+Count
+```
+$count = self::$db->count('post', ['type' => 'text']);
 ```
 
 Update
 ```
-self::$db->update('user', [
-				'_id' => $id
-			], [
-				'$set' => [
-          'username' => $username
-        ]
-			]);
+$update = $db->update('user', ['_id' => $id], ['$set' => ['username' => 'test']]);
 ```
 
 Delete
 ```
-self::$db->delete('post', [
-				'_id' => $id
-			]);
+$delete = $db->delete('post', ['_id' => $id]);
 ```
